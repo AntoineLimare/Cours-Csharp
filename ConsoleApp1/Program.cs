@@ -24,19 +24,25 @@ class Program
             // Affichage du résultat
             Console.WriteLine($"Votre salaire net mensuel est de : {salaireMensuelNet:F2} euros");
 
-            // Conseils en fonction du salaire
-            if (salaireAnnuel > 50000)
+            // Déclaration et initialisation des variables
+            string[] mois = {
+            "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+            "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+        };
+            
+
+            // Affichage du tableau structuré
+            Console.WriteLine("+------------+---------+");
+            Console.WriteLine("| Mois       | Salaire |");
+            Console.WriteLine("+------------+---------+");
+
+            foreach (string m in mois)
             {
-                Console.WriteLine("Conseil : Pensez à faire des dons pour réduire vos impôts !");
+                // Salaire fixe pour tous les mois
+                Console.WriteLine($"| {m,-10} | {salaireMensuelNet:F2} |");
             }
-            else if (salaireMensuelBrut < 1500)
-            {
-                Console.WriteLine("C'est un salaire courant pour un alternant, continuez à acquérir de l'expérience !");
-            }
-            else if (salaireAnnuel >= 30000 && salaireAnnuel <= 40000)
-            {
-                Console.WriteLine("Pourquoi ne pas venir au CESI pour un bac +5 et booster votre carrière ?");
-            }
+
+            Console.WriteLine("+------------+---------+");
         }
         catch (FormatException)
         {
