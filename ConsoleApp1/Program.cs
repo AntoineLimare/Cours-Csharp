@@ -14,6 +14,10 @@ class Program
             Console.Write("Entrez votre taux d'imposition (en pourcentage) : ");
             double tauxImposition = Convert.ToDouble(Console.ReadLine());
 
+            // Récupération du taux d'imposition
+            Console.Write("Entrez votre prime de noël (en pourcentage) : ");
+            double primeNoel = Convert.ToDouble(Console.ReadLine());
+
             // Calcul du salaire annuel net
             double salaireAnnuelNet = salaireAnnuel * (1 - (tauxImposition / 100));
 
@@ -41,7 +45,7 @@ class Program
                 if (m == "Décembre")
                 {
 
-                    Console.WriteLine($"| {m,-10} | {salaireMensuelNet * 1.1:F2} |");
+                    Console.WriteLine($"| {m,-10} | {salaireMensuelNet * (1+primeNoel/100):F2} |");
                 }
                 
                 else if (m == "Août")
