@@ -17,11 +17,26 @@ class Program
             // Calcul du salaire annuel net
             double salaireAnnuelNet = salaireAnnuel * (1 - (tauxImposition / 100));
 
-            // Calcul du salaire mensuel net
+            // Calcul du salaire mensuel brut et net
+            double salaireMensuelBrut = salaireAnnuel / 12;
             double salaireMensuelNet = salaireAnnuelNet / 12;
 
             // Affichage du résultat
             Console.WriteLine($"Votre salaire net mensuel est de : {salaireMensuelNet:F2} euros");
+
+            // Conseils en fonction du salaire
+            if (salaireAnnuel > 50000)
+            {
+                Console.WriteLine("Conseil : Pensez à faire des dons pour réduire vos impôts !");
+            }
+            else if (salaireMensuelBrut < 1500)
+            {
+                Console.WriteLine("C'est un salaire courant pour un alternant, continuez à acquérir de l'expérience !");
+            }
+            else if (salaireAnnuel >= 30000 && salaireAnnuel <= 40000)
+            {
+                Console.WriteLine("Pourquoi ne pas venir au CESI pour un bac +5 et booster votre carrière ?");
+            }
         }
         catch (FormatException)
         {
