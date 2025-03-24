@@ -38,8 +38,22 @@ class Program
 
             foreach (string m in mois)
             {
-                // Salaire fixe pour tous les mois
-                Console.WriteLine($"| {m,-10} | {salaireMensuelNet:F2} |");
+                if (m == "Décembre")
+                {
+
+                    Console.WriteLine($"| {m,-10} | {salaireMensuelNet * 1.1:F2} |");
+                }
+                
+                else if (m == "Août")
+                {
+                    Console.WriteLine($"| {m,-10} | {0:F2} |");
+                }
+
+                else
+                {
+                    // Salaire fixe pour tous les mois
+                    Console.WriteLine($"| {m,-10} | {salaireMensuelNet:F2} |");
+                }
             }
 
             Console.WriteLine("+------------+---------+");
