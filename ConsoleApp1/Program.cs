@@ -6,7 +6,8 @@ class Program
     {
         try
         {
-            Console.Write("");
+            Console.Write("Choix 1: Salaire net mensuel");
+            Console.Write("Choix 2: tableau");
             int choix = Convert.ToInt32(Console.ReadLine());
             if (choix == 1)
             {

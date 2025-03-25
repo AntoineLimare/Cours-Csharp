@@ -16,12 +16,15 @@ class Fonction
         // Calcul du salaire mensuel brut et net
         double salaireMensuelBrut = salaireAnnuel / 12;
         double salaireMensuelNet = salaireAnnuelNet / 12;
-        Console.WriteLine($"Votre salaire net mensuel est de : {salaireMensuelNet:F2} euros");
+        
 
+        Console.WriteLine($"Votre salaire net mensuel est de : {salaireMensuelNet:F2} euros");
+        return salaireMensuelNet
     }// Calcul du salaire annuel net
     
-    public static void TableauSalaire()
+    public static void TableauSalaire(double salaireMensuelNet)
     {
+        SalaireMensuelNet();
         // Récupération du taux d'imposition
         Console.Write("Entrez votre prime de noël (en pourcentage) : ");
         double primeNoel = Convert.ToDouble(Console.ReadLine());

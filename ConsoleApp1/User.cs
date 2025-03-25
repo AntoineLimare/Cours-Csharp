@@ -18,11 +18,11 @@
     }
     public void AfficherInfo()
     {
-        Console.WriteLine($"Id : {User.Id}");
-        Console.WriteLine($"Prénom : {User.FirstName}");
-        Console.WriteLine($"Nom : {User.LastName}");
-        Console.WriteLine($"Age : {User.Age}");
-        Console.WriteLine($"Salaire : {User.Salaire}");
-        Console.WriteLine($"Taxe : {User.Taxe}");
+        Console.WriteLine($"Id : {Id}");
+        Console.WriteLine($"Prénom : {FirstName}");
+        Console.WriteLine($"Nom : {LastName}");
+        Console.WriteLine($"Age : {Age}");
+        Console.WriteLine($"Salaire : {Salaire}");
+        Console.WriteLine($"Taxe : {Taxe}");
     }
 }
