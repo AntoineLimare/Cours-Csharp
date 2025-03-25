@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 
 class Program
 {
@@ -66,16 +66,8 @@ class Program
         {
             Console.WriteLine("Erreur : Veuillez entrer des valeurs numériques valides.");
         }
+        User Leo = new User(1, "Leo", "Lesage", 18, 10, 50);
+        Leo.AfficherInfo();
     }
     
-}
-
-class User
-{
-    public int id;
-    public string FirstName; 
-    public string LastName;
-    public int Old;
-    public double Salary;
-    public double Tax;
 }
