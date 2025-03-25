@@ -67,4 +67,15 @@ class Program
             Console.WriteLine("Erreur : Veuillez entrer des valeurs numériques valides.");
         }
     }
+    
+}
+
+class User
+{
+    public int id;
+    public string FirstName; 
+    public string LastName;
+    public int Old;
+    public double Salary;
+    public double Tax;
 }
